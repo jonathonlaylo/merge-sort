@@ -1,7 +1,34 @@
-Algorithm
+# Merge Sort
+> aka "partition-exchange sort"
 
-Divide the unsorted list into n sublists, each containing 1 element (a list of 1 element is considered sorted).
+> Merge sort is a divide and conquer algorithm. 
 
-Repeatedly merge sublists to produce new sorted sublists until there is only 1 sublist remaining. This will be the sorted list
+> Divide the unsorted list into n sublists, each containing 1 element (a list of 1 element is considered sorted)
 
-In computer science, merge sort (also commonly spelled mergesort) is an efficient, general-purpose, comparison-based sorting algorithm. Most implementations produce a stable sort, which means that the implementation preserves the input order of equal elements in the sorted output. Mergesort is a divide and conquer algorithm that was invented by John von Neumann in 1945.[1] A detailed description and analysis of bottom-up mergesort appeared in a report by Goldstine and Neumann as early as 1948.[2]
+> Repeatedly merge sublists to produce new sorted sublists until there is only 1 sublist remaining. This will be the sorted list.
+
+Best Case Scenario - O(n log(n))
+
+Average Case Scenario - O(n log(n))
+
+Worst Case Scenario - O(n log(n))
+
+## Psuedo code
+```
+function mergeSort(list) 
+  middle = list.length / 2
+  left = list.slice(0, middle)
+  right = list.slice(middle)
+  if (list.length < 2)
+    return list
+  return merge
+
+function merge(left, right)
+  tmp
+  while left.length and right.length
+    if left[0] < right[0]
+      tmp push(left)
+    else
+      tmp push(right)
+  return tmp.concat(left.concat(right))
+```
